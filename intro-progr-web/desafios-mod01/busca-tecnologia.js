@@ -27,23 +27,20 @@ const usuarios = [
 ];
 
 function checaSeUsuarioUsaCSS(usuario) {
-  for (let i = 0; i < usuarios.length; i++) {
+  for (let i = 0; i < usuario.tecnologia.length; i++) {
 
-    if (usuarios[i].tecnologia == "CSS") {
-      usuario = true;
-    } else {
-      usuario = false;
-    }
+    if (usuario.tecnologia[i] == "CSS") {
+      return true
+    } 
   }
-  return usuario
+  return false
 }
 
-const usuario = checaSeUsuarioUsaCSS()
 
 for (let i = 0; i < usuarios.length; i++) {
-  const usuarioTrabalhaComCSS = checaSeUsuarioUsaCSS(usuario[i]);
+  const usuarioTrabalhaComCSS = checaSeUsuarioUsaCSS(usuarios[i]);
 
   if (usuarioTrabalhaComCSS) {
-    console.log(`O usuário ${usuario[i].nome} trabalha com CSS`);
+    console.log(`O usuário ${usuarios[i].nome} trabalha com CSS`);
   }
 }
