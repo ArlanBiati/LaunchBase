@@ -16,6 +16,8 @@ const usuarios = [
   }
 ];
 
+/* jeito um de fazer
+
 
 function calculaSaldo (usuarios) {
   
@@ -44,3 +46,36 @@ function imprimeSaldo () {
   }
 }
 imprimeSaldo()
+
+
+Jeito dois de fazer               */
+
+function calculaSaldo(receitas, despesas) {
+
+  let somaReceita = somaNumero(receitas)
+  let somaDespesas = somaNumero(despesas)
+
+  let saldo = (somaReceita - somaDespesas)
+  return saldo
+}
+
+function somaNumero(numero) {
+  let soma = 0
+  for (let i = 0; i < numero.length; i++) {
+    soma += numero[i]
+  }
+  return soma
+}
+
+function imprimeSaldo() {
+  for (let i = 0; i < usuarios.length; i++) {
+    let saldo = calculaSaldo(usuarios[i].receitas, usuarios[i].despesas).toFixed(2)
+    if (saldo < 0) {
+      console.log(`${usuarios[i].nome} tem um saldo NEGATIVO de R$: ${saldo}`)
+    } else {
+      console.log(`${usuarios[i].nome} tem um saldo POSITIVO de R$: ${saldo}`)
+    }
+  }
+}
+
+imprimeSaldo() 

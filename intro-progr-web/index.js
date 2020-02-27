@@ -1,38 +1,97 @@
-/*
+const classA = [
+  {
+    name: "Arlan",
+    grade: 9.8
+  },
 
-CALCULO DE MÉDIA - NOTAS ALUNOS
+  {
+    name: "Rosalha",
+    grade: 10
+  },
 
-const aluno = "Arlan"
-const notaAluno = 1
+  {
+    name: "Diego",
+    grade: 6
+  },
 
-const aluno02 = "Rosalha"
-const notaAluno02 = 10
+  {
+    name: "Mayk",
+    grade: 7
+  },
 
-const media = (notaAluno + notaAluno02) / 2
+  {
+    name: "Giuberto",
+    grade: 1
+  }
+]
 
-if (media > 5) {
-  console.log('Aprovado')
-} else {
-  console.log('Reprovado')
+const classB = [
+  {
+    name: "Cleber",
+    grade: 7
+  },
+
+  {
+    name: "Isa",
+    grade: 5
+  },
+
+  {
+    name: "Vitor",
+    grade: 3
+  },
+
+  {
+    name: "Alexandre",
+    grade: 10
+  },
+]
+
+function calculateAverage(students) {
+  let sum = 0;
+  for (let i = 0; i < students.length; i++) {
+    sum = sum + students[i].grade
+  };
+
+  const average = sum / students.length
+  return average
+
+};
+
+
+function sendMessage(average, turma) {
+  if (average > 5) {
+    console.log(`${turma} average: ${average}. Congrats`)
+  } else {
+    console.log(`${turma} average: ${average}. Is not good.`)
+  };
+};
+
+
+function markAsFlunked(student) {
+  student.flunked = false;
+  if (student.grade < 5) {
+    student.flunked = true;
+  }
 }
 
-console.log(media)
-*/
-
-/* Desafio 1 - Verificar se a pessoa é maior ou igual a 18 anos; 
-               Se sim, deixar entrar, caso contrario, não
-               Se tiver 17, voltar quando tiver 18
-
-const pessoa = "Arlan"
-const idade = 16
-
-if (idade >= 18) {
-  console.log(`Você tem ${idade}, pode entrar.`)
-} else if (idade === 17) {
-  console.log(`Você tem ${idade}, volte quando tiver 18.`)
-} else {
-  console.log(`Você tem ${idade}, não pode entrar.`)
+function sendFlunkedMessage(student) {
+  if (student.flunked) {
+    console.log(`${student.name} flunked`)
+  }
 }
-*/
 
-// Desafio 2 - Dar bonificação de R$ 1.000,00
+function studentsFlunked(students) {
+  for (let student of students) {
+    markAsFlunked(student);
+    sendFlunkedMessage(student)
+  }
+}
+const average1 = calculateAverage(classA)
+const average2 = calculateAverage(classB)
+
+sendMessage(average1, 'Class A')
+sendMessage(average2, 'Class B')
+
+studentsFlunked(classA)
+studentsFlunked(classB)
