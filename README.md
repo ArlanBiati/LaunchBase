@@ -2,10 +2,6 @@
     <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="400px" />
 </h1>
 
-<h3 align="center">
-  Desafio 1-1: Primeiros passos com JS
-</h3>
-
 <blockquote align="center">“Querer vencer significa já ter percorrido metade do caminho.”</blockquote>
 
 <p align="center">
