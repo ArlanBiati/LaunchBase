@@ -58,7 +58,6 @@ function calculateAverage(students) {
 
 };
 
-
 function sendMessage(average, turma) {
   if (average > 5) {
     console.log(`${turma} average: ${average}. Congrats`)
@@ -66,7 +65,6 @@ function sendMessage(average, turma) {
     console.log(`${turma} average: ${average}. Is not good.`)
   };
 };
-
 
 function markAsFlunked(student) {
   student.flunked = false;
@@ -87,6 +85,7 @@ function studentsFlunked(students) {
     sendFlunkedMessage(student)
   }
 }
+
 const average1 = calculateAverage(classA)
 const average2 = calculateAverage(classB)
 

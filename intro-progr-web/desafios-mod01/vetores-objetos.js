@@ -22,5 +22,4 @@ const dev = {
   ]
 }
 
-// Imprimindo a mensagem no console do Node -> Arlan Biati tem 24 anos e usa a tecnologia Javascript com especialidade em Web / Mobile.
-console.log(`${dev.nome} tem ${dev.idade} anos e usa a tecnologia ${dev.tecnologias[0].nome} com especialidade em ${dev.tecnologias[0].especialidade}.`)
+console.log(`O usuário ${dev.nome} tem ${dev.idade} anos e usa a tecnologia ${dev.tecnologias[0].nome} com especialidade em ${dev.tecnologias[0].especialidade}.`)
