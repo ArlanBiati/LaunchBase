@@ -5,22 +5,91 @@ const user = {
 };
 
 function createTransaction(type, value) {
-
-  let transaction = user.transactions.push({
+  user.transactions.push({
     type: type,
     value: value
   })
 
-  return transaction
+  if (type == "credit") {
+    user.balance = user.balance + value
+  } else {
+    user.balance = user.balance - value
+  }
+
 }
 
-for (let i = 0; i < user.transactions.length; i++) {
-  
+/* Está função eu criei, porem não funcionou. Estou tentando entender o motivo ainda. 
+function createTransaction(type, value) {
+
+  user.transactions.push({
+    type: type,
+    value: value
+  })
+
+  for (let i = 0; i < user.transactions.length; i++) {
+
+    if (user.transactions[i].type !== "credit") {
+      return user.balance -= user.transactions[i].value
+    } else {
+      return user.balance += user.transactions[i].value
+    }
+  }
 }
-  
 
-createTransaction("debito", 2000)
-createTransaction("credito", 5000)
-
+createTransaction("credit", 300)
+createTransaction("credit", 500)
+createTransaction("debit", 200)
 
 console.log(user)
+*/
+
+function getHigherTransactionByType(type) {
+
+  let higherValue = 0
+  let higherTransaction
+  for (let i = 0; i < user.transactions.length; i++) {
+
+    if ((type == user.transactions[i].type) && (user.transactions[i].value > higherValue)) {
+      higherValue = user.transactions[i].value
+      higherTransaction = user.transactions[i]
+    }
+  }
+  return higherTransaction
+}
+
+function getAverageTransactionValue() {
+  let average = 0
+  for (let i = 0; i < user.transactions.length; i++) {
+    average = (average + (user.transactions[i].value))
+  }
+  return average / user.transactions.length
+}
+
+function getTransactionsCount() {
+  let count = {
+    credit: 0,
+    debit: 0
+  }
+  for (let i = 0; i < user.transactions.length; i++) {
+    if (user.transactions[i].type === 'credit') {
+      count.credit++
+    } else {
+      count.debit++
+    }
+  }
+  return count
+}
+
+createTransaction('credit', 50)
+createTransaction('credit', 120)
+createTransaction('debit', 80)
+createTransaction('debit', 30)
+
+console.log(user.balance)
+
+console.log(getHigherTransactionByType('credit'))
+console.log(getHigherTransactionByType('debit'))
+
+console.log(getAverageTransactionValue())
+
+console.log(getTransactionsCount())
