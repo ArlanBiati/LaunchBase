@@ -313,73 +313,82 @@ Sicrano possui saldo NEGATIVO de -90.3
 
 Desafios para fortalecer alguns conceitos, entre eles:
 
-- **Objetos**;
-- **Vetores**.
+- **Booleanos**;
+- **Organização**;
+- **Padronização**;
+- **Escrita**.
 
-### Construção e impressão de objetos
+### Intro
 
-Crie um programa que armazena dados da empresa Rocketseat dentro de um objeto chamado `empresa`. Os dados a serem armazenados são:
+Crie um programa para realizar operações bancárias na conta de um usuário.
 
-- Nome: Rocketseat
-- Cor: Roxo
-- Foco: Programação
-- Endereço:
+Comece criando um objeto com o nome do usuário, suas transações e saldo.
 
-  - Rua: Rua Guilherme Gembala
-  - Número: 260
-
-_Obs.: Para armazenar os dados de endereço da empresa você pode criar objetos intercalados, por exemplo:_
+As transações (transactions) devem iniciar como um array vazio `[]` e o saldo (balance) em `0` (zero).
 
 ```js
-const usuario = {
-  nome: "Diego",
-  empresa: {
-    nome: "Rocketseat"
-  }
+const user = {
+  name: "Mariana",
+  transactions: [],
+  balance: 0
 };
 ```
 
-Imprima em tela utilizando `console.log` o nome da empresa e seu endereço no seguinte formato:
+### Adicionar transações
 
-```
-A empresa Rocketseat está localizada em Rua Guilherme Gembala, 260
-```
-
-_Obs. Para imprimir em tela utilize o formato de template strings, por exemplo_
+Crie uma função `createTransaction` para adicionar uma nova transação no array de transações de um usuário, essa função deve receber como parâmetro um objeto de transação que tem o seguinte formato:
 
 ```js
-console.log(`O nome do usuário é ${usuario.nome}`);
+{
+  type: 'credit',
+  value: 50.5
+}
 ```
 
-### Vetores e objetos
+O `type` pode ser `credit` para créditos e `debit` para débitos da conta do usuário.
 
-Crie um programa com um objeto para armazenar dados de um programador como `nome`, `idade` e `tecnologias` que trabalha.
+Quanto uma transação for do tipo `credit` ela deve também somar o valor do crédito no saldo (balance) do usuário.
 
-Um programador pode trabalhar com várias tecnologias, por isso armazene essas tecnologias em um array.
+Se for uma transação do tipo `debit` ela deve subtrair o valor do débito no saldo (balance) do usuário.
 
-As tecnologias também devem ser objetos contendo `nome` e `especialidade`, use as tecnologias abaixo:
+_Dica.: Você pode usar o método `user.transactions.push(transaction)` para adicionar um novo item no array de transações._
+
+### Relatórios
+
+- Crie uma função chamada `getHigherTransactionByType` que recebe como parâmetro o tipo de transação `credit/debit`, percorre as transações do usuário e retorna o **objeto** da transação de maior valor com aquele tipo:
 
 ```js
-{ nome: 'C++', especialidade: 'Desktop' }
-{ nome: 'Python', especialidade: 'Data Science' }
-{ nome: 'JavaScript', especialidade: 'Web/Mobile' }
+getHigherTransactionByType("credit"); // { type: 'credit', value: 120 }
 ```
 
-Por exemplo:
+- Crie uma função chamada `getAverageTransactionValue` que retorna o valor médio das transações de um usuário independente do seu tipo:
 
 ```js
-const objeto = {
-  propriedade: [
-    { nome: "C++", especialidade: "Desktop" },
-    { nome: "JavaScript", especialidade: "Web/Mobile" }
-  ]
-};
+getAverageTransactionValue(); // 83.3
 ```
 
-Imprima em tela o nome e especialidade da primeira tecnologia que o usuário utiliza no seguinte formato:
+- Crie uma função chamada `getTransactionsCount` que retorna o número de transações de cada tipo `credit/debit`, o retorno da função deve ser um objeto e seguir exatamente como o modelo apresentado abaixo:
 
+```js
+getTransactionsCount(); // { credit: 5, debit: 3 }
 ```
-O usuário Carlos tem 32 anos e usa a tecnologia C++ com especialidade em Desktop
+
+### Exemplo de resultado final do projeto:
+
+```js
+createTransaction({ type: "credit", value: 50 });
+createTransaction({ type: "credit", value: 120 });
+createTransaction({ type: "debit", value: 80 });
+createTransaction({ type: "debit", value: 30 });
+
+console.log(user.balance); // 60
+
+getHigherTransactionByType("credit"); // { type: 'credit', value: 120 }
+getHigherTransactionByType("debit"); // { type: 'debit', value: 80 }
+
+getAverageTransactionValue(); // 70
+
+getTransactionsCount(); // { credit: 2, debit: 2 }
 ```
 
 
