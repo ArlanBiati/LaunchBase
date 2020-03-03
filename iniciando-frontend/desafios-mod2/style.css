@@ -1,3 +1,7 @@
+:root {
+  --color--green: #50fa7b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +11,81 @@
 
 html, body {
   height: 100%;
+  background-color: #282a36;
+  color: white;
 }
 
 header {
   padding: 30px;
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: var(--color--green) 1px solid;
 }
 
-div.nav {
+.links {
+  text-align: center;
+}
+
+.links a {
   margin: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+}
+
+.links a:hover{
+  color: var(--color--green);
+  transition: color 300ms;
+}
+
+.wraper {
+  text-align: center;
+  padding: 35px;
+}
+
+.wraper img {
+  border-radius: 100%;
+  border: var(--color--green) 5px solid;
+  width: 20%;
+  height: 20%;
+  margin-bottom: 35px;
+}
+
+.wraper h1 {
+  color: var(--color--green);
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: bold;
+}
+
+.wraper h3 {
+  font-size: 24px;
+  line-height: 34px;
+  margin-top: 8px;
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.wraper p {
+  max-width: 500px;
+  margin: 32px auto;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.wraper ul {
+  list-style: none;
+  max-width: 500px;
+  margin: 32px auto;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+footer .links {
+  padding: 30px;
+  border-top: 1px solid var(--color--green);
+}
+
+.links a {
+  text-decoration: none;
 }
