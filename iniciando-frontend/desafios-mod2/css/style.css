@@ -1,5 +1,6 @@
 :root {
   --color--green: #50fa7b;
+  --color--rocket: #7159c1;
 }
 
 * {
@@ -18,7 +19,7 @@ html, body {
 header {
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.1);
-  border-bottom: var(--color--green) 1px solid;
+  border-bottom: var(--color--rocket) 2px solid;
 }
 
 .links {
@@ -44,15 +45,15 @@ header {
 }
 
 .wraper img {
-  border-radius: 100%;
-  border: var(--color--green) 5px solid;
-  width: 20%;
-  height: 20%;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  border: var(--color--rocket)  5px solid;
+  width: 30%;
   margin-bottom: 35px;
 }
 
 .wraper h1 {
-  color: var(--color--green);
+  color: var(--color--rocket) ;
   font-size: 42px;
   line-height: 52px;
   font-weight: bold;
@@ -83,9 +84,44 @@ header {
 
 footer .links {
   padding: 30px;
-  border-top: 1px solid var(--color--green);
+  border-top: 2px solid var(--color--rocket) ;
 }
 
 .links a {
   text-decoration: none;
+}
+
+/* ============= CARDS =============== */
+
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--color--rocket);
+}
+
+.card img {
+  width: 100%;
+  max-width: 800px;
+}
+
+.card-content, .card-info {
+  padding: 24px;
+}
+
+.card-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-price {
+  background-color: var(--color--rocket);
+  filter: brightness(90%);
+  padding: 5px 20px;
+  border-radius: 20px;
 }
