@@ -1,0 +1,157 @@
+/* =========== GLOBAL ========== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ============= HEADER ============= */
+
+
+nav {
+  display: grid;
+  grid-template-columns: 91px 2fr;
+  gap: 120px;
+  align-items: center;
+  margin: 31px 0 50px;
+}
+
+.menu a img {
+  width: 90.6px;
+  height: 26.9px;
+}
+
+.menu .nav-inf a {
+  margin-left: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #111111;
+  font-weight: normal;
+}
+
+.menu .nav-inf .recipes {
+  font-weight: bold;
+}
+
+/* ================= SECTION RECIPES ========== */
+
+.recipes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.recipe img {
+  width: 300px;
+  height: 140px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.recipe h1 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #111111;
+  font-weight: normal;
+}
+
+.recipe p {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #777777;
+}
+
+/* =============== MODAL ================= */
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.modal {
+  background-color: #FFFFFF;
+  width: 660px;
+  height: 415px;
+  border-radius: 16px;
+  transform: translate(100%, 75%);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.modal-content img {
+  border-radius: 16px;
+  margin-top: 30px;
+  width: 600px;
+  height: 200px;
+}
+
+.modal-content h1 {
+  font-size: 24px;
+  color: #111111;
+  margin: 20px 0 5px;
+  text-align: center;
+}
+
+.modal-content p {
+  font-size: 18px;
+  color: #777777;
+  text-align: center;
+}
+
+.modal .close-modal{
+  color: #999999;
+  font-size: 16px;
+  position: absolute;
+  bottom: 30px;
+  right: 281px;
+  cursor: pointer;
+}
+
+/* =================== MODAL ACTIVE ============== */
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.active {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+/* ============== FOOTER ================== */
+
+footer {
+  background-color: #EEEEEE;
+  height: 70px;
+  margin-top: 50px;
+}
+
+footer h1 {
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+  font-weight: normal;
+  padding-top: 28px;
+}
