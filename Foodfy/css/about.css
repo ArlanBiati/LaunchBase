@@ -40,6 +40,10 @@ nav {
   font-weight: normal;
 }
 
+.menu .nav-inf .about {
+  font-weight: bold;
+}
+
 /* ================= SECTION ABOUT ========== */
 
 section .title {
