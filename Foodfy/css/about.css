@@ -1,0 +1,80 @@
+/* =========== GLOBAL ========== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ============= HEADER ============= */
+
+
+nav {
+  display: grid;
+  grid-template-columns: 91px 2fr;
+  gap: 120px;
+  align-items: center;
+  margin: 31px 0 50px;
+}
+
+.menu a img {
+  width: 90.6px;
+  height: 26.9px;
+}
+
+.menu .nav-inf a {
+  margin-left: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #111111;
+  font-weight: normal;
+}
+
+/* ================= SECTION ABOUT ========== */
+
+section .title {
+  font-size: 24px;
+  color: #111111;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+section .subtitle {
+  font-size: 20px;
+  color: #111111;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #444444;
+}
+
+/* ============== FOOTER ================== */
+
+footer {
+  background-color: #EEEEEE;
+  height: 70px;
+  margin-top: 50px;
+}
+
+footer h1 {
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+  font-weight: normal;
+  padding-top: 28px;
+}
