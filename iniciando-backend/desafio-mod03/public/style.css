@@ -1,0 +1,244 @@
+:root {
+  --color--green: #50fa7b;
+  --color--rocket: #7159c1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background-image: url(/img/bakcground-rocket.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  background-color: black;
+}
+
+header {
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: var(--color--rocket) 2px solid;
+}
+
+.links {
+  text-align: center;
+}
+
+.links a {
+  margin: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+}
+
+.links a:hover{
+  color: var(--color--green);
+  transition: color 300ms;
+}
+
+.wraper {
+  text-align: center;
+  padding: 35px;
+}
+
+.wraper img {
+  border-radius: 20%;
+  padding: 20px;
+  border: var(--color--rocket)  5px solid;
+  width: 30%;
+  margin-bottom: 35px;
+}
+
+.wraper h1 {
+  color: var(--color--rocket) ;
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: bold;
+}
+
+.wraper h3 {
+  font-size: 24px;
+  line-height: 34px;
+  margin-top: 8px;
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.wraper p {
+  text-align: justify;
+  max-width: 500px;
+  margin: 32px auto;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.wraper ul {
+  text-decoration: underline double var(--color--rocket);
+  list-style: none;
+  max-width: 500px;
+  margin: 32px auto;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+footer .links {
+  margin-top: 50px;
+  padding: 30px;
+  border-top: 2px solid var(--color--rocket) ;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+/* ============= CARDS =============== */
+
+.cards {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+#starter, #launchbase, #gostack {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  background-image: url(/iniciando-frontend/desafios-mod2/img/bakcground-rocket.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-color: rgba(108, 12, 163, 0.1);
+  height: 600px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 3px solid rgb(11, 10, 13);
+}
+
+#starter:hover {
+  transition: 400ms;
+  border-color: var(--color--rocket);
+}
+
+#launchbase:hover {
+  transition: 400ms;
+  border-color: rgb(231, 165, 42);
+}
+
+#gostack:hover {
+  transition: 400ms;
+  border-color: var(--color--green);
+}
+
+.card img {
+  max-width: 200px;
+}
+
+.card-content, .card-info {
+  padding: 80px;
+}
+
+.card-content p {
+  font-size: 16px;
+  line-height: 26px;
+  color: gray;
+}
+
+.card-content p.starter strong {
+  color: var(--color--rocket);
+}
+
+.card-content p.launch strong {
+  color: rgb(231, 165, 42);
+}
+
+.card-content p.gostack strong {
+  color: var(--color--green);
+}
+
+.card-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-price-starter {
+  background-color: var(--color--rocket);
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+.card-price-launch {
+  background-color: rgb(231, 165, 42);
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+.card-price-gostack {
+  background-color: var(--color--green);
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+/* ======================= MODAL ========================*/
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.modal {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.modal .close-modal, .modal .maximize-modal {
+  color: rgb(255, 0, 0);
+  position: absolute;
+  right: 0;
+  top: 5px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.maximize-modal {
+  right: 60px !important;
+  top: 13px !important; 
+}
+
+/* ============ MODAL ACTIVE / MODAL MAXIMIZE =========== */
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.active {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
