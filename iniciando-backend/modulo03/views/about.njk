@@ -8,11 +8,10 @@
 
   <main class="inf-company">
     <div class="wraper">
-      <img src="https://avatars0.githubusercontent.com/u/43690080?s=460&v=4" alt="Arlan Biati">
-      <h1>Arlan Biati</h1>
-      <h3>Desenvolvedor web FullStack</h3>
-      <p>Programador Full-Stack, focado em trazer as melhores interfaces para o cliente. 
-      Apaixonado pela linguagem Javascript e entusiasta de todo seu ecossistema</p>
+      <img src="{{ about.avatar_url }}" alt="Arlan Biati">
+      <h1>{{ about.namel }}</h1>
+      <h3>{{ about.role }}</h3>
+      <p>{{ about.description }}</p>
       <ul>
         <li>HTML</li>
         <li>CSS</li>
@@ -25,10 +24,13 @@
 
   <footer>
     <div class="links">
-      <a href="www.github.com/ArlanBiati">GitHub</a>
-      <a href="https://www.instagram.com/arlangbiati/" target="_blanck">Instagram</a>
-      <a href="https://www.facebook.com/arlan.biati" target="_blanck">Facebook</a>
-      <a href="https://www.linkedin.com/in/arlan-biati-2b3512115/" target="_blanck">LinkedIn</a>
+
+      {% for link in about.links %}
+
+      <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+      
+      {% endfor %}
+      
     </div>
   </footer>
 

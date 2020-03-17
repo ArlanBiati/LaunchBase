@@ -14,95 +14,24 @@
 
   <section class="cards">
 
-    <div class="card">
+    {% for item in items %}
+
+    <div class="card" id="{{item.id}}">
       <div class="cards-image-container">
-        <img src="https://img.youtube.com/vi/IPLTUlRFxgo/maxresdefault.jpg" alt="rocketseat">
+        <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}">
       </div>
 
       <div class="card-content">
-        <p>Nenhuma PR passará sem padrões</p>
+        <p>{{item.title}}</p>
       </div>
 
       <div class="card-info">
-        <p>57min</p>
-        <p class="card-price">Free</p>
+        <p>{{item.duration}}</p>
+        <p class="card-price">{{item.price}}</p>
       </div>
     </div>
 
-    <div class="card">
-      <div class="cards-image-container">
-        <img src="https://img.youtube.com/vi/IPLTUlRFxgo/maxresdefault.jpg" alt="rocketseat">
-      </div>
-
-      <div class="card-content">
-        <p>Nenhuma PR passará sem padrões</p>
-      </div>
-
-      <div class="card-info">
-        <p>57min</p>
-        <p class="card-price">Free</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="cards-image-container">
-        <img src="https://img.youtube.com/vi/IPLTUlRFxgo/maxresdefault.jpg" alt="rocketseat">
-      </div>
-
-      <div class="card-content">
-        <p>Nenhuma PR passará sem padrões</p>
-      </div>
-
-      <div class="card-info">
-        <p>57min</p>
-        <p class="card-price">Free</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="cards-image-container">
-        <img src="https://img.youtube.com/vi/IPLTUlRFxgo/maxresdefault.jpg" alt="rocketseat">
-      </div>
-
-      <div class="card-content">
-        <p>Nenhuma PR passará sem padrões</p>
-      </div>
-
-      <div class="card-info">
-        <p>57min</p>
-        <p class="card-price">Free</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="cards-image-container">
-        <img src="https://img.youtube.com/vi/IPLTUlRFxgo/maxresdefault.jpg" alt="rocketseat">
-      </div>
-
-      <div class="card-content">
-        <p>Nenhuma PR passará sem padrões</p>
-      </div>
-
-      <div class="card-info">
-        <p>57min</p>
-        <p class="card-price">Free</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="cards-image-container">
-        <img src="https://img.youtube.com/vi/IPLTUlRFxgo/maxresdefault.jpg" alt="rocketseat">
-      </div>
-
-      <div class="card-content">
-        <p>Nenhuma PR passará sem padrões</p>
-      </div>
-
-      <div class="card-info">
-        <p>57min</p>
-        <p class="card-price">Free</p>
-      </div>
-    </div>
+    {% endfor %}
 
   </section>
 
