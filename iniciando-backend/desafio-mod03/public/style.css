@@ -151,15 +151,15 @@ footer .links {
   color: gray;
 }
 
-.card-content p.starter strong {
+div#starter .card-content p.starter strong {
   color: var(--color--rocket);
 }
 
-.card-content p.launch strong {
+div#launchbase .card-content p.launch strong {
   color: rgb(231, 165, 42);
 }
 
-.card-content p.gostack strong {
+div#gostack .card-content p.gostack strong {
   color: var(--color--green);
 }
 
@@ -171,19 +171,19 @@ footer .links {
   font-weight: bold;
 }
 
-.card-price-starter {
+div#starter p.card-price-starter {
   background-color: var(--color--rocket);
   padding: 5px 20px;
   border-radius: 20px;
 }
 
-.card-price-launch {
+div#launchbase p.card-price-launch {
   background-color: rgb(231, 165, 42);
   padding: 5px 20px;
   border-radius: 20px;
 }
 
-.card-price-gostack {
+div#gostack p.card-price-gostack {
   background-color: var(--color--green);
   padding: 5px 20px;
   border-radius: 20px;

@@ -7,12 +7,9 @@
 {% block about %}
   <main class="inf-company">
     <div class="wraper">
-      <img src="/img/logo-rocketseat.svg" alt="Rocket Seat">
-      <h1>Rocketseat</h1>
-      <p>Empresa especializada em ensinar jovens programadores a darem o próximo passo em suas carreiras.
-         Atraves do ensino "mão na massa", onde os alunos prendem praticando.
-         Rocketseat é a empresa mais foda do planeta !
-      </p>
+      <img src="{{ about.logo_url }}" alt="Rocket Seat">
+      <h1>{{ about.name }}</h1>
+      <p>{{ about.description }}</p>
       <ul>
         <li>Javascript</li>
         <li>ReactJS</li>

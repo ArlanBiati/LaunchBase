@@ -13,61 +13,26 @@
     </div>
   </main>
 
+  {% for course in courses %}
+
   <section class="cards">
 
-    <div class="card" id="starter">
+    <div class="card" id="{{ course.id }}">
       <div class="card-content">
-        <p class="starter">
-          <strong>Torne-se um programador desejado</strong>
-          no mercado com esses cursos gratuitos
-        </p>
+        <p class="starter">{{ course.description }}</p>
       </div>
 
       <div class="cards-image-container">
-        <img src="/img/starter.svg" alt="starter">
+        <img src="{{ course.url_img }}" alt="starter">
       </div>
 
       <div class="card-info">
-        <p class="starter">6 Módulos</p>
-        <p class="card-price-starter">Free</p>
+        <p class="starter">{{ course.module }}</p>
+        <p class="card-price-starter">{{ course.price }}</p>
       </div>
     </div>
 
-    <div class="card" id="launchbase">
-      <div class="card-content">
-        <p class="launch">
-          <strong>Domine programação do zero</strong>
-          e tenha acesso as melhores oportunidades do mercado
-        </p>
-      </div>
-
-      <div class="cards-image-container">
-        <img src="/img/launchbase.svg" alt="launchbase">
-      </div>
-
-      <div class="card-info">
-        <p class="launch">17 Módulos</p>
-        <p class="card-price-launch">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="gostack">
-      <div class="card-content">
-        <p class="gostack">
-          <strong>Treinamento imersivo</strong> 
-          nas tecnologias mais modernas de desenvolvimento web e mobile
-        </p>
-      </div>
-
-      <div class="cards-image-container">
-        <img src="/img/gostack.svg" alt="gostack">
-      </div>
-
-      <div class="card-info">
-        <p>20 Módulos</p>
-        <p class="card-price-gostack">Free</p>
-      </div>
-    </div>
+    {% endfor %}
 
   </section>
 
