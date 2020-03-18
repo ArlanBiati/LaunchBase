@@ -13,13 +13,14 @@
     </div>
   </main>
 
-  {% for course in courses %}
 
   <section class="cards">
 
+  {% for course in courses %}
+
     <div class="card" id="{{ course.id }}">
       <div class="card-content">
-        <p class="starter">{{ course.description }}</p>
+        <p class="{{ course.id }}">{{ course.description }}</p>
       </div>
 
       <div class="cards-image-container">
@@ -27,12 +28,12 @@
       </div>
 
       <div class="card-info">
-        <p class="starter">{{ course.module }}</p>
-        <p class="card-price-starter">{{ course.price }}</p>
+        <p class="{{ course.id }}">{{ course.module }}</p>
+        <p class="card-price-{{ course.id }}">{{ course.price }}</p>
       </div>
     </div>
 
-    {% endfor %}
+  {% endfor %}
 
   </section>
 
@@ -60,4 +61,4 @@
 
   <script src="script.js"></script>
 
-  {% endblock %}
+{% endblock %}

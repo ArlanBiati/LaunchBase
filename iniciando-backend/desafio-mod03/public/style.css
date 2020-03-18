@@ -111,7 +111,7 @@ footer .links {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
-  background-image: url(/iniciando-frontend/desafios-mod2/img/bakcground-rocket.png);
+  background-image: url(/img/bakcground-rocket.png);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -151,15 +151,15 @@ footer .links {
   color: gray;
 }
 
-div#starter .card-content p.starter strong {
+.card-content p.starter strong {
   color: var(--color--rocket);
 }
 
-div#launchbase .card-content p.launch strong {
+.card-content p.launchbase strong {
   color: rgb(231, 165, 42);
 }
 
-div#gostack .card-content p.gostack strong {
+.card-content p.gostack strong {
   color: var(--color--green);
 }
 
@@ -171,19 +171,19 @@ div#gostack .card-content p.gostack strong {
   font-weight: bold;
 }
 
-div#starter p.card-price-starter {
+.card-price-starter {
   background-color: var(--color--rocket);
   padding: 5px 20px;
   border-radius: 20px;
 }
 
-div#launchbase p.card-price-launch {
+.card-price-launchbase {
   background-color: rgb(231, 165, 42);
   padding: 5px 20px;
   border-radius: 20px;
 }
 
-div#gostack p.card-price-gostack {
+.card-price-gostack {
   background-color: var(--color--green);
   padding: 5px 20px;
   border-radius: 20px;
