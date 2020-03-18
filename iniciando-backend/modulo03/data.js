@@ -7,10 +7,11 @@ module.exports = [
   },
 
   {
-    id: "IPLTUlRFxgo",
-    title: "Nenhuma PR passará sem padrões",
+    id: "GOB-lawExXc",
+    title: "React Hooks com TYPESCRIPT",
     duration: "57 min",
-    price: "Free"
+    price: "Free",
+    featured: true
   },
 
   {
@@ -21,10 +22,11 @@ module.exports = [
   },
 
   {
-    id: "IPLTUlRFxgo",
-    title: "Nenhuma PR passará sem padrões",
+    id: "GOB-lawExXc",
+    title: "React Hooks com TYPESCRIPT",
     duration: "57 min",
-    price: "Free"
+    price: "Free",
+    featured: true
   },
 
   {
@@ -35,9 +37,10 @@ module.exports = [
   },
 
   {
-    id: "IPLTUlRFxgo",
-    title: "Nenhuma PR passará sem padrões",
+    id: "GOB-lawExXc",
+    title: "React Hooks com TYPESCRIPT",
     duration: "57 min",
-    price: "Free"
+    price: "Free",
+    featured: true
   }
 ]

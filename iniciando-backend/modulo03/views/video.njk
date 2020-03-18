@@ -1,0 +1,34 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>{{ item.title }} - Arlan Biati</title>
+{% endblock %}
+
+{% block content %}
+
+  <main>
+    <div class="wraper video">
+      <h1>{{ item.title }}</h1>
+    </div>
+  </main>
+
+  <section class="video">
+
+    <div class="card" id="{{ item.id }}">
+      <div class="card-video-container">
+        <iframe src="https://www.youtube.com/embed/{{ item.id }}" frameborder="0"></iframe>
+      </div>
+
+      <div class="card-content">
+        <p>{{item.title}}</p>
+      </div>
+
+      <div class="card-info">
+        <p>{{item.duration}}</p>
+        <p class="card-price">{{item.price}}</p>
+      </div>
+    </div>
+
+  </section>
+
+{% endblock %}
