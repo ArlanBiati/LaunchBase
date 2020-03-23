@@ -5,6 +5,7 @@ const server = express()
 const about = require("./about")
 const courses = require("./courses")
 
+
 server.use(express.static('public'))
 
 server.set("view engine", "njk")
@@ -23,9 +24,26 @@ server.get("/", function (req, res) {
   });
 })
 
-server.get("/about", function (res, req) {
 
-  req.render("about", {about})
+server.get("/courses/:id", function(req, res) {
+  const id = req.params.id;
+
+  const course = courses.find(function(course) {
+    return course.id == id
+  })
+
+  if(!course) {
+    return res.send("Video Not Found")
+  }
+
+  return res.render("course", { course });
+});
+
+
+
+server.get("/about", function (req, res) {
+
+  res.render("about", {about})
 
   server.use(function (req, res) {
     res.status(404).render("not-found");
