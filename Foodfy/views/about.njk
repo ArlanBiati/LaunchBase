@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/about.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-  <title>Foodfy</title>
-</head>
-<body>
+{% extends 'layout.njk' %}
 
-  <header class="container">
-    <nav class="menu">
 
-      <a href="index.html">
-        <img src="img/logo.png" alt="logo">
-      </a>
+{% block head %}
+  <link rel="stylesheet" href="/css/about.css">
+  <title>Sobre - Foodfy</title>
+{% endblock head %}
 
-      <div class="nav-inf">
-        <a class="about" href="about.html">Sobre</a>
-        <a class="recipes" href="recipes.html">Receitas</a>
-      </div>
 
-    </nav>
-  </header>
-  
+{% block section %}
+
   <section class="container about">
 
     <h1 class="title">Sobre o Foodfy</h1>
@@ -40,8 +25,4 @@
     <p>Fusce nec pulvinar nunc. Duis porttitor tincidunt accumsan. Quisque pulvinar mollis ipsum ut accumsan. Proin ligula lectus, rutrum vel nisl quis, efficitur porttitor nisl. Morbi ut accumsan felis, eu ultrices lacus. Integer in tincidunt arcu, et posuere ligula. Morbi cursus facilisis feugiat. Praesent euismod nec nisl at accumsan. Donec libero neque, vulputate semper orci et, malesuada sodales eros. Nunc ut nulla faucibus enim ultricies euismod.</p>
   </section>
 
-  <footer>
-    <h1>Todos os direitos reservados, receitas Foodfy.</h1>
-  </footer>
-</body>
-</html>
+{% endblock section %}
