@@ -31,3 +31,68 @@ server.use(function(req, res) {
   res.status(404).render("not-found");
 });
 ```
+
+
+
+
+
+
+
+
+
+
+<h3 align="center">
+  Desafio 3-2: Arquivos nunjucks e dados dinâmicos
+</h3>
+
+<blockquote align="center">“Nunca é tarde demais para ser aquilo que sempre desejou ser.”</blockquote>
+
+
+## :rocket: Sobre o desafio
+
+Nesse desafio você deve atualizar os arquivos com informações de cursos e descrição de forma dinâmica.
+
+
+
+
+
+
+
+
+
+
+<h3 align="center">
+  Desafio 3-3: Página de descrição do curso
+</h3>
+
+<blockquote align="center">“Não se perca tentando ser melhor que ninguém, esforce-se apenas por ser e dar o melhor de você.”</blockquote>
+
+
+## :rocket: Sobre o desafio
+
+Nesse desafio você deve criar uma página de descrição do curso que deve ser chamada no lugar da modal quando o usuário clicar no card do curso.
+
+### Rota
+
+A rota também será a `/courses`, porém o id do curso será passado via route params (ex.: `/courses/id_do_curso`). Dica: utilize o req.params para recuperar o id fornecido na rota.
+
+```js
+server.get("/courses/:id", function(req, res) {
+  const id = req.params.id;
+
+  return res.send(`O id fornecido na rota é: ${id}`);
+});
+```
+
+### Informações
+
+- Layout padrão
+- Card do curso
+- Link que redireciona para a página do curso
+
+
+
+
+
+ ![ezgif com-gif-maker](https://user-images.githubusercontent.com/43690080/77362300-77432100-6d2f-11ea-9e83-6f02a9a3e267.gif)
+
