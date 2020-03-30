@@ -1,4 +1,5 @@
 module.exports = [
+
   {
     image: '/img/burger.png',
     title: 'Triplo bacon burger',
@@ -132,4 +133,5 @@ module.exports = [
     ],
     information: ''
   }
-];
+
+]

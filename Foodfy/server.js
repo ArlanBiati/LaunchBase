@@ -4,7 +4,7 @@ const nunjucks = require('nunjucks')
 const server = express()
 
 const recipes = require('./recipes')
-const data = require('./data')
+const recipe = require('./recipe')
 
 server.use(express.static('public'))
 
@@ -18,7 +18,7 @@ nunjucks.configure('views', {
 
 server.get('/', function(req, res) {
   res.render('index', {recipes})
-
+  
   server.use(function(req, res) {
     res.status(404).render('not-found');
   })
@@ -33,7 +33,7 @@ server.get('/about', function(req, res) {
 })
 
 server.get('/recipes', function(req, res) {
-  res.render('recipes', {data})
+  res.render('recipes', {recipe})
 
   server.use(function(req, res) {
     res.status(404).render('not-found');

@@ -2,19 +2,19 @@
 
   {% block head %}
     <link rel="stylesheet" href="/css/recipes.css">
-    <title>Receitas - Foodfy</title>
+    <title>Receita - Foodfy</title>
   {% endblock head %}
 
   
   {% block section %}
 
-    <section>
-      <img src="{{ data.image }}" alt="image recipe">
-      <h1>{{ data.title }}</h1>
-      <p>{{ data.author }}</p>
+    <section class='container'>
+      <img src="{{ recipe.image }}" alt="image recipe">
+      <h1>{{ recipe.title }}</h1>
+      <p>{{ recipe.author }}</p>
     </section>
 
-    <section>
+    <section class='container'>
 
       <div>
         <div>
@@ -23,7 +23,7 @@
         </div>
         
         <ul>
-          <li>{{ data.ingredientes }}</li>
+          <li>{{ recipe.ingredientes }}</li>
         </ul>
       </div>
 
@@ -35,13 +35,14 @@
 
         <p></p>
       </div>
+
       <div>
         <div>
           <h1>Informações adicionais</h1>
           <p>ESCONDER</p>
         </div>
 
-        <p>{{ data.information }}</p>
+        <p>{{ recipe.information }}</p>
         
       </div>
 
