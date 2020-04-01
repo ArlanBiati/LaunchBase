@@ -18,26 +18,22 @@ nunjucks.configure('views', {
 
 server.get('/', function(req, res) {
   res.render('index', {recipes})
-  
-  server.use(function(req, res) {
-    res.status(404).render('not-found');
-  })
 })
 
 server.get('/about', function(req, res) {
   res.render('about')
-
-  server.use(function(req, res) {
-    res.status(404).render('not-found');
-  })
 })
 
-server.get('/recipes', function(req, res) {
-  res.render('recipes', {recipe})
+server.get('/recipe/:id', function(req, res) {
 
-  server.use(function(req, res) {
-    res.status(404).render('not-found');
-  })
+  const recipeId = req.params.id
+
+  res.render('recipe', {recipe: recipe[recipeId]})
+
+})
+
+server.use(function(req, res) {
+  res.status(404).render('not-found');
 })
 
 

@@ -84,7 +84,7 @@ nav {
   margin-top: 50px;
 }
 
-.most-accessed .img {
+.most-accessed .recipe-img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;

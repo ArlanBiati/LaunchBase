@@ -25,15 +25,17 @@
 
     <h1>Mais acessadas</h1>
 
-    <div class="img">
+    <div class="recipe-img">
 
     {% for recipe in recipes %}
 
+      <div class='recipe-content'>
         <div class="most-accessed-img">
           <img src="{{recipe.image}}" alt="image about recipe">
           <h1>{{recipe.description}}</h1>
           <p>{{recipe.athor}}</p>
         </div>
+      </div>
       
 
     {% endfor %}

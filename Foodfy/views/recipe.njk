@@ -1,48 +1,48 @@
 {% extends 'layout.njk' %}
 
   {% block head %}
-    <link rel="stylesheet" href="/css/recipes.css">
+    <link rel="stylesheet" href="/css/recipe.css">
     <title>Receita - Foodfy</title>
   {% endblock head %}
 
   
   {% block section %}
 
-    <section class='container'>
+    <section class="container recipe">
       <img src="{{ recipe.image }}" alt="image recipe">
       <h1>{{ recipe.title }}</h1>
-      <p>{{ recipe.author }}</p>
+      <p>por {{ recipe.author }}</p>
     </section>
 
-    <section class='container'>
+    <section class="container information_recipe">
 
-      <div class='ingredients' >
-        <div>
+      <div class="ingredients" >
+        <div class="ingredients_esconder">
           <h1>Ingredientes</h1>
           <p>ESCONDER</p>
         </div>
         
-        <ul>
+        <ul class="ingredients_list hide">
           <li>{{ recipe.ingredientes }}</li>
         </ul>
       </div>
 
-      <div class='preparation' >
-        <div>
+      <div class="preparation" >
+        <div class="preparation_esconder">
           <h1>Modo de preparo</h1>
           <p>MOSTRAR</p>
         </div>
 
-        <p></p>
+        <p class="preparation_p hide"></p>
       </div>
 
-      <div class='information' >
-        <div>
+      <div class="information" >
+        <div class="information_esconder">
           <h1>Informações adicionais</h1>
           <p>ESCONDER</p>
         </div>
 
-        <p>{{ recipe.information }}</p>
+        <p class="information_p hide">{{ recipe.information }}</p>
         
       </div>
 
