@@ -9,9 +9,8 @@
 
 {% block section %}
 
-  <section class="container recipe">
-
-    <div class="description-recipe">
+  <section class="container recipes">
+    <div class="best-recipes">
       <h1>As melhores receitas</h1>
       <p>
         Aprenda a construir os melhores pratos com receitas 
@@ -25,19 +24,18 @@
 
     <h1>Mais acessadas</h1>
 
-    <div class="recipe-img">
+    <div class="recipe">
 
     {% for recipe in recipes %}
 
-      <div class='recipe-content'>
-        <div class="most-accessed-img">
+      <div class='recipe-content' id='{{recipe.id}}'>
+        <div class="most-accessed-recipe">
           <img src="{{recipe.image}}" alt="image about recipe">
           <h1>{{recipe.description}}</h1>
           <p>{{recipe.athor}}</p>
         </div>
       </div>
       
-
     {% endfor %}
 
     </div>

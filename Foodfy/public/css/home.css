@@ -42,7 +42,7 @@ nav {
 
 /* ================ SECTION - RECIPE ===================== */
 
-.recipe {
+.recipes {
   background-color: #FBDFDB;
   width: 960px;
   height: 366px;
@@ -52,18 +52,18 @@ nav {
   align-items: center;
 }
 
-.recipe .description-recipe {
+.recipes .best-recipes {
   text-align: justify;
   margin-left: 60px;
   max-width: 320px;
 }
 
-.recipe .description-recipe h1 { 
+.recipes .best-recipes h1 { 
   font-size: 32px;
   font-weight: bold;
 }
 
-.recipe .description-recipe p {
+.recipes .best-recipes p {
   font-size: 18px;
   font-weight: normal;
   line-height: 28px;
@@ -72,7 +72,7 @@ nav {
   margin-top: 48px;
 }
 
-.recipe img {
+.recipes img {
   width: 216px;
   height: 300px;
   align-self: flex-end;
@@ -84,28 +84,28 @@ nav {
   margin-top: 50px;
 }
 
-.most-accessed .recipe-img {
+.most-accessed .recipe {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   margin-top: 20px;
 }
 
-.most-accessed-img img {
+.most-accessed-recipe img {
   width: 300px;
   height: 140px;
   border-radius: 15px;
   cursor: pointer;  
 }
 
-.most-accessed-img h1 {
+.most-accessed-recipe h1 {
   margin-top: 20px;
   font-size: 18px;
   color: #111111;
   font-weight: normal;
 }
 
-.most-accessed-img p {
+.most-accessed-recipe p {
   margin-top: 5px;
   font-size: 14px;
   font-weight: normal;

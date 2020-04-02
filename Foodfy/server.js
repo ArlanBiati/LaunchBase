@@ -17,19 +17,18 @@ nunjucks.configure('views', {
 })
 
 server.get('/', function(req, res) {
-  res.render('index', {recipes})
+  res.render('home', {recipes})
 })
 
 server.get('/about', function(req, res) {
   res.render('about')
 })
 
-server.get('/recipe/:id', function(req, res) {
+server.get('/recipe/:index', function(req, res) {
 
-  const recipeId = req.params.id
+  const recipeIndex = req.params.index
 
-  res.render('recipe', {recipe: recipe[recipeId]})
-
+  res.render('recipe', { recipe: recipe[recipeIndex] })
 })
 
 server.use(function(req, res) {

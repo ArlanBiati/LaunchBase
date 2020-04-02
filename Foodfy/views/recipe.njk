@@ -14,35 +14,45 @@
       <p>por {{ recipe.author }}</p>
     </section>
 
-    <section class="container information_recipe">
+    <section class="container information-recipe">
 
-      <div class="ingredients" >
-        <div class="ingredients_esconder">
+      <div class="ingredients-description" >
+        <div class="ingredients">
           <h1>Ingredientes</h1>
-          <p>ESCONDER</p>
+          <p class='hide'>ESCONDER</p>
         </div>
         
-        <ul class="ingredients_list hide">
-          <li>{{ recipe.ingredientes }}</li>
+        <ul class="ingredients-list">
+
+        {% for ingredient in recipe.ingredients %}
+          <li class='ingredient-list'>{{ ingredient }}</li>
+        {% endfor %}
+
         </ul>
       </div>
 
-      <div class="preparation" >
-        <div class="preparation_esconder">
+      <div class="preparation-description" >
+        <div class="preparation">
           <h1>Modo de preparo</h1>
-          <p>MOSTRAR</p>
+          <p class='hide'>ESCONDER</p>
         </div>
 
-        <p class="preparation_p hide"></p>
+        <ul class="preparations-list">
+
+        {% for preparation in recipe.preparations %}
+          <li class='preparation-list'>{{ preparation }}</li>
+        {% endfor %}
+          
+        </ul>
       </div>
 
-      <div class="information" >
-        <div class="information_esconder">
+      <div class="information-description" >
+        <div class="information">
           <h1>Informações adicionais</h1>
-          <p>ESCONDER</p>
+          <p class='hide'>ESCONDER</p>
         </div>
 
-        <p class="information_p hide">{{ recipe.information }}</p>
+        <p class="information-p">{{ recipe.information }}</p>
         
       </div>
 

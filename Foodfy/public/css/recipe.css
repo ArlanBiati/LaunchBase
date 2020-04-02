@@ -72,64 +72,71 @@ nav {
   color: #777777;
 }
 
-/* =============== PREPARATION ================= */
+/* =============== INFORMATIONS RECIPE ================= */
 
-.information_recipe{
+.information-recipe{
   min-height: 30vh;
 }
 
-.ingredients_esconder {
+.ingredients {
   display: grid;
   grid-template-columns: 15% 8%;
   align-items: baseline;
-  margin-bottom: 47px;
 }
 
-.preparation_esconder {
+.preparation {
   display: grid;
   grid-template-columns: 20% 8%;
   align-items: baseline;
-  margin-bottom: 47px;
 }
 
-.information_esconder {
+.information {
   display: grid;
   grid-template-columns: 27% 8%;
   align-items: baseline;
 }
 
-.ingredients_esconder h1,
-.preparation_esconder h1,
-.information_esconder h1 {
+.ingredients h1,
+.preparation h1,
+.information h1 {
   font-weight: bold;
   font-size: 24px;
   color: #111111;
 }
 
-.ingredients_esconder p,
-.preparation_esconder p,
-.information_esconder p {
+.ingredients p,
+.preparation p,
+.information p {
   font-size: 12px;
   font-weight: bold;
   color: #777777;
   cursor: pointer;
 }
 
-.hide {
-  display: none;
+.ingredients-list,
+.preparations-list {
+  text-align: justify;
+  font-size: 18px;
+  color: #444444;
+  margin-top: 20px;
+  margin-bottom: 39px;
+  line-height: 28px;
+  font-weight: 400; 
 }
 
-/* =================== MODAL ACTIVE ============== */
-
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
+.ingredient-list,
+.preparation-list {
+  margin-top: 5px; 
 }
 
-.modal.active {
-  width: 100%;
-  height: 100%;
-  margin: auto;
+.information-p {
+  font-size: 18px;
+  color: #444444;
+  margin-top: 20px;
+  margin-bottom: 39px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: justify;
 }
 
 /* ============== FOOTER ================== */
