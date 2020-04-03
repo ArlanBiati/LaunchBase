@@ -1,6 +1,7 @@
 module.exports = [
 
   {
+    id: 0,
     image: '/img/burger.png',
     title: 'Triplo bacon burger',
     author: 'Jorge Relato',
@@ -25,6 +26,7 @@ module.exports = [
   },
 
   {
+    id: 1,
     image: '/img/pizza.png',
     title: 'Pizza 4 estações',
     author: 'Fabiana Melo',
@@ -53,6 +55,7 @@ module.exports = [
   },
 
   {
+    id: 2,
     image: '/img/asinhas.png',
     title: 'Asinhas de frango ao barbecue',
     author: 'Vania Steroski',
@@ -71,6 +74,7 @@ module.exports = [
   },
 
   {
+    id: 3,
     image: '/img/lasanha.png',
     title: "Lasanha mac n' cheese",
     author: 'Juliano Vieira',
@@ -92,6 +96,7 @@ module.exports = [
   },
 
   {
+    id: 4,
     image: '/img/espaguete.png',
     title: 'Espaguete ao alho',
     author: 'Júlia Kinoto',
@@ -117,6 +122,7 @@ module.exports = [
   },
 
   {
+    id: 5,
     image: '/img/doce.png',
     title: 'Docinhos pão-do-céu',
     author: 'Ricardo Golvea',

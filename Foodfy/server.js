@@ -24,11 +24,11 @@ server.get('/about', function(req, res) {
   res.render('about')
 })
 
-server.get('/recipe/:index', function(req, res) {
+server.get('/recipe/:id', function(req, res) {
 
-  const recipeIndex = req.params.index
+  const recipeId = req.params.id
 
-  res.render('recipe', { recipe: recipe[recipeIndex] })
+  res.render('recipe', { recipe: recipe[recipeId] })
 })
 
 server.use(function(req, res) {

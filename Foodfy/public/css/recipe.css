@@ -120,6 +120,7 @@ nav {
   color: #444444;
   margin-top: 20px;
   margin-bottom: 39px;
+  margin-left: 15px;
   line-height: 28px;
   font-weight: 400; 
 }
@@ -137,6 +138,13 @@ nav {
   line-height: 28px;
   font-weight: 400;
   text-align: justify;
+}
+
+/* ============== SHOW-HIDE ============== */
+
+.hide {
+  display: none;
+  visibility: hidden;
 }
 
 /* ============== FOOTER ================== */

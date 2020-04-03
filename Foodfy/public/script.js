@@ -1,14 +1,28 @@
-const recipes = document.querySelectorAll('.recipe-content')
 
+const recipes = document.querySelectorAll('.recipe-content')
 for (let recipe of recipes) {
   recipe.addEventListener("click", function () {
 
-    const recipeIndex = recipe.getAttribute('id')
-    window.location.href = `/recipe/${recipe[recipeIndex]}`
+    const recipeId = recipe.getAttribute('id')
+    window.location.href = `/recipe/${recipeId}`
 
-    console.log(recipeIndex)
   })
 }
 
-const hide = document.querySelector('.hide')
+function showHide(esconder, change) {
+  document.querySelector(esconder).classList.toggle('hide')
+  
+  if(change.textContent == 'ESCONDER') {
+    change.innerHTML = 'MOSTRAR'
+  } else {
+    change.innerHTML = 'ESCONDER'
+  }
+}
+
+
+
+
+
+
+
 

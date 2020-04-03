@@ -14,12 +14,12 @@
       <p>por {{ recipe.author }}</p>
     </section>
 
-    <section class="container information-recipe">
+    <section id='list' class="container information-recipe">
 
       <div class="ingredients-description" >
         <div class="ingredients">
           <h1>Ingredientes</h1>
-          <p class='hide'>ESCONDER</p>
+          <p id='list1' onClick='showHide(".ingredients-list", this)' >ESCONDER</p>
         </div>
         
         <ul class="ingredients-list">
@@ -34,7 +34,7 @@
       <div class="preparation-description" >
         <div class="preparation">
           <h1>Modo de preparo</h1>
-          <p class='hide'>ESCONDER</p>
+          <p id='list2' onClick='showHide(".preparations-list", this)'>ESCONDER</p>
         </div>
 
         <ul class="preparations-list">
@@ -49,7 +49,7 @@
       <div class="information-description" >
         <div class="information">
           <h1>Informações adicionais</h1>
-          <p class='hide'>ESCONDER</p>
+          <p onClick='showHide(".information-p", this)'>ESCONDER</p>
         </div>
 
         <p class="information-p">{{ recipe.information }}</p>
