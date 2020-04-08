@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/1383/1383403.svg" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+
+    {% block head %}
+      <title>Gyn Manager</title>
+    {% endblock %}
+
+  </head>
+  <body>
+    <header>
+      <div class="links">
+        <a href="/" class="active">Instructor</a>
+        <a href="/members" >Members</a>
+      </div>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="/script.js"></script>
+
+  </body>
+</html>

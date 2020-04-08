@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --primary-color: #7159c1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--primary-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: white;
+  width: 100%;
+  padding: 32px;
+  text-align: center;
+}
+
+.links {
+  font-size: 22px;
+}
+
+.links a + a {
+  margin-left: 32px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #777;
+  position: relative;
+}
+
+.links a.active {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.links a:hover {
+  color: var(--primary-color);
+}
+
+.links a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.links a:hover::after{
+  content: "";
+  width: 100%;
+  transition: width 500ms ease-in-out;
+}
+
+
+/* =========== card ============= */
+
+.card {
+  background-color: white;
+
+  width: 60%;
+  height: 400px;
+  margin: 50px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.4);
+
+  animation: up 200ms ease-out;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card .avatar {
+  background-image: url(https://source.unsplash.com/collection/3465564/500x500);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
