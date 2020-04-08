@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-  --primary-color: #7159c1;
+  --primary-color: #0000009f;
 }
 
 * {
@@ -17,8 +17,44 @@ html, body {
 }
 
 header {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   padding: 32px;
   text-align: center;
+}
+
+.links a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(119, 119, 119, 0.637);
+  position: relative;
+}
+
+.links a + a {
+  margin-left: 40px;
+}
+
+.links .active {
+  color: var(--primary-color);
+}
+
+.links .active:hover {
+  color: var(--primary-color);
+}
+
+.links a::after {
+  content: "";
+  width: 0;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+}
+
+.links a:hover::after {
+  content: "";
+  width: 100%;
+  transition: width 500ms ease-in-out;
 }
