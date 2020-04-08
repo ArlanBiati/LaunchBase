@@ -4,6 +4,8 @@
   --primary-color: #0000009f;
 }
 
+/* ================== GLOBAL =================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,8 @@ html, body {
   background-color: var(--primary-color);
   font-family: 'Roboto', sans-serif;
 }
+
+/* ================== HEADER =================== */
 
 header {
   background-color: rgb(255, 255, 255);
@@ -43,6 +47,8 @@ header {
   color: var(--primary-color);
 }
 
+/* ====== HEADER BAR ANIMATION ===== */
+
 .links a::after {
   content: "";
   width: 0;
@@ -58,3 +64,42 @@ header {
   width: 100%;
   transition: width 500ms ease-in-out;
 }
+
+/* ================= SECTION CARD ================= */
+
+.card {
+  background-color: white;
+
+  width: 70%;
+  height: 700px;
+  margin: 50px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  box-shadow: 0px 5px 25px -5px rgba(119, 119, 119, 0.637);
+
+  animation: up 700ms ease-in-out;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ====== SECTION CARD IMAGE ===== */
+
+.card section.image {
+  background-image: url(https://source.unsplash.com/collection/991516/500x500);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ====== SECTION CARD DETAILS ===== */
+
