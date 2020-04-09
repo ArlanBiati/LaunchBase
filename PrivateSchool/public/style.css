@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #0000009f;
+  --second-color: rgba(119, 119, 119, 0.637);
 }
 
 /* ================== GLOBAL =================== */
@@ -25,13 +26,14 @@ header {
   width: 100%;
   padding: 32px;
   text-align: center;
+  border-bottom: 5px solid var(--second-color);
 }
 
 .links a {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  color: rgba(119, 119, 119, 0.637);
+  color: var(--second-color);
   position: relative;
 }
 
@@ -75,9 +77,9 @@ header {
   margin: 50px auto;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40% 60%;
 
-  box-shadow: 0px 5px 25px -5px rgba(119, 119, 119, 0.637);
+  box-shadow: 0px 5px 25px -5px var(--second-color);
 
   animation: up 700ms ease-in-out;
 }
@@ -95,7 +97,7 @@ header {
 /* ====== SECTION CARD IMAGE ===== */
 
 .card section.image {
-  background-image: url(https://source.unsplash.com/collection/991516/500x500);
+  background-image: url(https://source.unsplash.com/collection/8359212/500x700);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -103,3 +105,60 @@ header {
 
 /* ====== SECTION CARD DETAILS ===== */
 
+
+.details {
+  padding: 13% 10%;
+  animation: up 1s ease-in-out;
+}
+
+section.details > h3 {
+  padding-left: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 8px;
+  animation: up 1800ms ease-in-out;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+
+.details .item {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  animation: up 900ms ease-in-out;
+
+}
+
+.details .item:last-child {
+  border: none;
+}
+
+section.details div.item h3  {
+  font-size: 14px;
+  color: var(--second-color);
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+section.details div.item h2  {
+  font-size: 18px;
+  color: #555;
+  letter-spacing: 1px;
+  line-height: 28px;
+}
+
+.details .item span {
+  padding: 8px 16px;
+  background-color: #f7df1e;
+  border-radius: 16px;
+  color: #777777;
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
