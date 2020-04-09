@@ -45,7 +45,7 @@ header {
   color: var(--primary-color);
 }
 
-.links .active:hover {
+.links :hover {
   color: var(--primary-color);
 }
 
@@ -73,7 +73,7 @@ header {
   background-color: white;
 
   width: 70%;
-  height: 700px;
+  max-height: 700px;
   margin: 50px auto;
 
   display: grid;
@@ -101,13 +101,15 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 800px;
+  max-height: 900px;
 }
 
 /* ====== SECTION CARD DETAILS ===== */
 
 
 .details {
-  padding: 13% 10%;
+  padding: 5% 10%;
   animation: up 1s ease-in-out;
 }
 
