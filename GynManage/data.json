@@ -1,0 +1,22 @@
+{
+  "instructors": [
+    {
+      "avatar_url": "http://google.com",
+      "birth": 795139200000,
+      "created_at": 1586784995175,
+      "id": 1,
+      "gender": "M",
+      "services": "CrossFit",
+      "name": "Arlan Biati"
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://google.com",
+      "name": "Rosalha",
+      "birth": 826156800000,
+      "gender": "F",
+      "services": "CrossFit",
+      "created_at": 1586785052949
+    }
+  ]
+}

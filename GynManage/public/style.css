@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #7159c1;
+  --secundary-color: #f7df1e;
 }
 
 * {
@@ -69,7 +70,7 @@ header {
   background-color: white;
 
   width: 60%;
-  height: 400px;
+  min-height: 400px;
   margin: 50px auto;
 
   display: grid;
@@ -95,4 +96,87 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+/* ============ DETAILS =========== */
+
+.details {
+  padding: 32px;
+}
+
+.details .item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+.details .item:last-child {
+  border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  font-weight: normal;
+  color: #777;
+}
+
+.details .item div:nth-child(2) {
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.details h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.details .item span {
+  padding: 8px 16px;
+  background-color: var(--secundary-color);
+  border-radius: 16px;
+  color: #777777;
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* ============ FORM =============== */
+
+form input {
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+form input[type="radio"] {
+  width: initial;
+  margin-right: 10px;
+  
+}
+
+form input[type="date"],
+form input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+form button[type="submit"] {
+  padding: 8px 32px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 32px;
+  width: 100%;
 }
