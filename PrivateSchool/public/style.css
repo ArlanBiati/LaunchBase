@@ -164,3 +164,36 @@ section.details div.item h2  {
   text-transform: uppercase;
   font-size: 12px;
 }
+
+
+/* =========== INPUTS CREATE ======== */
+
+form input {
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+form input[type="radio"] {
+  width: initial;
+  margin-right: 10px;
+  
+}
+
+form input[type="date"],
+form input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.item select {
+  border: none;
+  color: #555;
+  background-color: white;
+  outline: none;
+  font-size: 16px;
+  font-weight: normal;
+}

@@ -1,0 +1,76 @@
+{% extends 'layout.njk' %}
+
+
+{% block content %}
+
+  <form class="card" action="/teachers" method="post">
+  
+    <section class="image"></section>
+
+    <section class="details">
+      <h3>Novo professor</h3>
+
+      <div class="item">
+        <h3>Avatar</h3>
+        <div>
+          <input type="url" name="url_avatar" placeholder="http://...">
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>Instrutor(a)</h3>
+        <div>
+          <input type="text" name="name" placeholder="Nome completo">
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>Idade</h3>
+        <div>
+          <input type="date" name="birth">
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>Sexo</h3>
+        <div>
+          <span><input type="radio" name="genre" value="M">Masculino</span>
+      
+          <span><input type="radio" name="genre" value="F">Feminino</span>
+        </div>
+      </div>
+
+      <div class="item">
+
+        <h3>Escolaridade</h3>
+        <select name="schooling">
+          <option value="EM">Ensino Médio Completo</option>
+          <option value="ES">Ensino Superior Completo</option>
+          <option value="M">Mestrado</option>      
+          <option value="D">Doutorado</option>
+        </select>
+
+      </div>
+
+      <div class="item">
+        <h3>Tipo de aula</h3>
+        <div>
+          <span><input type="radio" name="typeClass" value="P">Presencial</span>
+      
+          <span><input type="radio" name="typeClass" value="D">Á distancia</span>
+        </div>
+      </div>
+
+
+      <div class="item">
+        <h3>Acompanhamento(s)</h3>
+        <div>
+          <input type="text" name="subjectTeach" placeholder="Separe com vírgula">
+        </div>
+      </div>
+
+    </section>
+  
+  </form>
+
+{% endblock content %}
