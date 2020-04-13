@@ -15,6 +15,6 @@
 
 ## :memo: Licença
 
-Esse estudo está sob a licença MIT. Veja o arquivo [LICENSE](../LICENSE) para mais detalhes.
+Esse estudo está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/ArlanBiati/LaunchBase/blob/master/LICENSE) para mais detalhes.
 
 ---
