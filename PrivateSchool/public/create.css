@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --primary-color: #0000009f;
+  --second-color: rgba(119, 119, 119, 0.637);
+}
+
+/* ================== GLOBAL =================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--primary-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ================== HEADER =================== */
+
+header {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 32px;
+  text-align: center;
+  border-bottom: 5px solid var(--second-color);
+}
+
+.links a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--second-color);
+  position: relative;
+}
+
+.links a + a {
+  margin-left: 40px;
+}
+
+.links .active {
+  color: var(--primary-color);
+}
+
+.links :hover {
+  color: var(--primary-color);
+}
+
+/* ====== HEADER BAR ANIMATION ===== */
+
+.links a::after {
+  content: "";
+  width: 0;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+}
+
+.links a:hover::after {
+  content: "";
+  width: 100%;
+  transition: width 500ms ease-in-out;
+}
+
+/* ================= SECTION CARD ================= */
+
+.card {
+  background-color: white;
+
+  width: 70%;
+  height: 720px;
+  max-height: 800px;
+  margin: 50px auto;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  box-shadow: 2px 2px 25px -2px var(--second-color);
+
+  animation: up 700ms ease-in-out;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ====== SECTION CARD IMAGE ===== */
+
+.card section.image {
+  background-image: url(https://source.unsplash.com/collection/8359212/500x700);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 800px;
+  max-height: 900px;
+}
+
+/* ====== SECTION CARD DETAILS ===== */
+
+
+.details {
+  padding: 8% 16%;
+  animation: up 1s ease-in-out;
+  align-self: center;
+}
+
+section.details > h3 {
+  color: var(--primary-color);
+  padding-left: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 8px;
+  animation: up 1800ms ease-in-out;
+  border-left: 1px solid var(--second-color);
+  border-bottom: 1px solid var(--second-color);
+
+}
+
+.details .item {
+  padding: 16px 0 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  animation: up 900ms ease-in-out;
+
+}
+
+.details .item:nth-child(5),
+.details .item:nth-child(6) {
+  padding: 16px 0 8px 0;
+}
+
+section.details div.item h3  {
+  font-size: 14px;
+  color: var(--second-color);
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.details .item span {
+  padding: 8px 16px;
+  background-color: #f7df1e;
+  border-radius: 16px;
+  color: #777777;
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+
+/* =========== INPUTS CREATE ======== */
+
+form input {
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+form input[type="radio"] {
+  width: initial;
+  margin-right: 10px;
+  
+}
+
+form input[type="date"],
+form input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.item select {
+  border: none;
+  color: #555;
+  background-color: white;
+  outline: none;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  border-radius: 10px;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--second-color);
+  transition: 500ms ease-in-out;
+}

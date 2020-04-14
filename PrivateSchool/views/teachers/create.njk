@@ -1,5 +1,9 @@
 {% extends 'layout.njk' %}
 
+{% block head %}
+  <link rel="stylesheet" href="/create.css">
+  <title>Cadastro Professores - Private School</title>
+{% endblock head %}
 
 {% block content %}
 
@@ -55,9 +59,9 @@
       <div class="item">
         <h3>Tipo de aula</h3>
         <div>
-          <span><input type="radio" name="typeClass" value="P">Presencial</span>
+          <span><input type="radio" name="typeClass_p" value="P">Presencial</span>
       
-          <span><input type="radio" name="typeClass" value="D">Á distancia</span>
+          <span><input type="radio" name="typeClass_d" value="D">Á distancia</span>
         </div>
       </div>
 
@@ -65,9 +69,11 @@
       <div class="item">
         <h3>Acompanhamento(s)</h3>
         <div>
-          <input type="text" name="subjectTeach" placeholder="Separe com vírgula">
+          <input type="text" name="subjectTeach" placeholder="Separe os serviçoes prestados por vírgula">
         </div>
       </div>
+
+      <button type="submit">Salvar</button>
 
     </section>
   

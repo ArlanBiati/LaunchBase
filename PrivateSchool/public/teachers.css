@@ -73,7 +73,8 @@ header {
   background-color: white;
 
   width: 70%;
-  max-height: 700px;
+  height: 700px;
+  max-height: 800px;
   margin: 50px auto;
 
   display: grid;
@@ -109,11 +110,13 @@ header {
 
 
 .details {
-  padding: 5% 10%;
+  padding: 2% 16%;
   animation: up 1s ease-in-out;
+  align-self: center;
 }
 
 section.details > h3 {
+  color: var(--primary-color);
   padding-left: 8px;
   padding-bottom: 8px;
   margin-bottom: 8px;
@@ -121,16 +124,21 @@ section.details > h3 {
   font-size: 20px;
   letter-spacing: 8px;
   animation: up 1800ms ease-in-out;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 1px solid var(--second-color);
+  border-bottom: 1px solid var(--second-color);
 
 }
 
 .details .item {
-  padding: 16px 0;
+  padding: 16px 0 8px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   animation: up 900ms ease-in-out;
 
+}
+
+.details .item:nth-child(5),
+.details .item:nth-child(6) {
+  padding: 16px 0 8px 0;
 }
 
 .details .item:last-child {
@@ -163,37 +171,4 @@ section.details div.item h2  {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
-}
-
-
-/* =========== INPUTS CREATE ======== */
-
-form input {
-  width: 100%;
-  outline: none;
-  border: none;
-  color: #555;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-form input[type="radio"] {
-  width: initial;
-  margin-right: 10px;
-  
-}
-
-form input[type="date"],
-form input::placeholder {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.item select {
-  border: none;
-  color: #555;
-  background-color: white;
-  outline: none;
-  font-size: 16px;
-  font-weight: normal;
 }
