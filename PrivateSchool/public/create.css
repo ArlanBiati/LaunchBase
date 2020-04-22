@@ -73,9 +73,10 @@ header {
   background-color: white;
 
   width: 70%;
-  height: 720px;
-  max-height: 800px;
-  margin: 50px auto;
+  height: 750px;
+  max-width: 70%;
+  max-height: 750px;
+  margin: 50px auto 0px;
 
   display: grid;
   grid-template-columns: 40% 60%;
@@ -98,12 +99,12 @@ header {
 /* ====== SECTION CARD IMAGE ===== */
 
 .card section.image {
-  background-image: url(https://source.unsplash.com/collection/8359212/500x700);
+  background-image: url(https://source.unsplash.com/collection/8359212/400x700);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 800px;
-  max-height: 900px;
+  max-width: 750px;
+  max-height: 750px;
 }
 
 /* ====== SECTION CARD DETAILS ===== */
