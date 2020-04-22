@@ -17,6 +17,14 @@
       "gender": "F",
       "services": "CrossFit",
       "created_at": 1586785052949
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://google.com",
+      "name": "Arlan Biati",
+      "birth": 795139200000,
+      "services": "CrossFit, Musculação",
+      "created_at": 1587565416746
     }
   ]
 }
