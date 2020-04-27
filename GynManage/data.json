@@ -1,30 +1,13 @@
 {
   "instructors": [
     {
-      "avatar_url": "http://google.com",
-      "birth": 795139200000,
-      "created_at": 1586784995175,
       "id": 1,
-      "gender": "M",
-      "services": "CrossFit",
-      "name": "Arlan Biati"
-    },
-    {
-      "id": 2,
-      "avatar_url": "http://google.com",
-      "name": "Rosalha",
-      "birth": 826156800000,
-      "gender": "F",
-      "services": "CrossFit",
-      "created_at": 1586785052949
-    },
-    {
-      "id": 3,
-      "avatar_url": "http://google.com",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/43690080?s=460&u=d8671c95e833f582e7a85da4813da30be0ea0ac0&v=4",
       "name": "Arlan Biati",
       "birth": 795139200000,
-      "services": "CrossFit, Musculação",
-      "created_at": 1587565416746
+      "gender": "M",
+      "services": "Musculação, CrossFit, Natação",
+      "created_at": 1587990128477
     }
   ]
 }

@@ -91,13 +91,6 @@ header {
   }
 }
 
-.card .avatar {
-  background-image: url(https://source.unsplash.com/collection/3465564/500x500);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 /* ============ DETAILS =========== */
 
 .details {
@@ -170,7 +163,8 @@ form input::placeholder {
   font-weight: normal;
 }
 
-form button[type="submit"] {
+button[type="submit"],
+a.button {
   padding: 8px 32px;
   background-color: var(--primary-color);
   color: white;
@@ -179,4 +173,10 @@ form button[type="submit"] {
   border: none;
   margin-top: 32px;
   width: 100%;
+}
+
+a.button {
+  text-decoration: none;
+  display: block;
+  text-align: center;
 }

@@ -3,7 +3,7 @@
 {% block content %}
 
   <div class="card">
-    <section class="avatar"></section>
+    <section class="avatar" style="background-image: url({{ instructor.avatar_url }}); background-repeat: no-repeat; background-size: cover; background-position: center;"></section>
 
     <section class="details">
       <h3>Detalhes</h3>
@@ -27,15 +27,17 @@
         <div>Acompanhamento</div>
         <div>
           {% for service in instructor.services %}
-          <span>{{ service }}</span>
+            <span>{{ service }}</span>
           {% endfor %}
         </div>
       </div>
 
       <div class="item">
         <div>Desde</div>
-        <div>{{ instructor.create_at }}</div>
+        <div>{{ instructor.created_at }}</div>
       </div>
+
+      <a href="/instructors/{{ instructor.id }}/edit" class="button">Editar</a>
 
     </section>
   </div>
