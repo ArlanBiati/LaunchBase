@@ -14,64 +14,32 @@
     <section class="details">
       <h3>Novo professor</h3>
 
-      <div class="item">
-        <h3>Avatar</h3>
-        <div>
-          <input type="url" name="url_avatar" placeholder="http://...">
-        </div>
-      </div>
+      {% include '/teachers/fields.njk' %}
 
-      <div class="item">
-        <h3>Instrutor(a)</h3>
-        <div>
-          <input type="text" name="name" placeholder="Nome completo">
-        </div>
-      </div>
+      <button type="submit">Salvar</button>
 
-      <div class="item">
-        <h3>Idade</h3>
-        <div>
-          <input type="date" name="birth">
-        </div>
-      </div>
+    </section>
+  
+  </form>
 
-      <div class="item">
-        <h3>Sexo</h3>
-        <div>
-          <span><input type="radio" name="genre" value="M">Masculino</span>
-      
-          <span><input type="radio" name="genre" value="F">Feminino</span>
-        </div>
-      </div>
+{% endblock content %}
+{% extends 'layout.njk' %}
 
-      <div class="item">
+{% block head %}
+  <link rel="stylesheet" href="/create.css">
+  <title>Editar Professores - Private School</title>
+{% endblock head %}
 
-        <h3>Escolaridade</h3>
-        <select name="schooling">
-          <option value="EM">Ensino Médio Completo</option>
-          <option value="ES">Ensino Superior Completo</option>
-          <option value="M">Mestrado</option>      
-          <option value="D">Doutorado</option>
-        </select>
+{% block content %}
 
-      </div>
+  <form class="card" action="/teachers" method="post">
+  
+    <section class="image"></section>
 
-      <div class="item">
-        <h3>Tipo de aula</h3>
-        <div>
-          <span><input type="radio" name="typeClass_p" value="P">Presencial</span>
-      
-          <span><input type="radio" name="typeClass_d" value="D">Á distancia</span>
-        </div>
-      </div>
+    <section class="details">
+      <h3>Cadastrar Professor</h3>
 
-
-      <div class="item">
-        <h3>Acompanhamento(s)</h3>
-        <div>
-          <input type="text" name="subjectTeach" placeholder="Separe os serviçoes prestados por vírgula">
-        </div>
-      </div>
+      {% include '/teachers/fields.njk' %}
 
       <button type="submit">Salvar</button>
 

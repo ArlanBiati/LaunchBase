@@ -1,0 +1,25 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+  <link rel="stylesheet" href="/create.css">
+  <title>Editar Professores - Private School</title>
+{% endblock head %}
+
+{% block content %}
+
+  <form class="card" action="/teachers" method="post">
+  
+    <section class="image"></section>
+
+    <section class="details">
+      <h3>Editar Professor</h3>
+
+      {% include '/teachers/fields.njk' %}
+
+      <a href="/teachers/{{teacher.id}}/edit" class="button">Editar</a>
+
+    </section>
+  
+  </form>
+
+{% endblock content %}
