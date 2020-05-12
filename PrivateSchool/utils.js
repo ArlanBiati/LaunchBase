@@ -23,5 +23,18 @@ module.exports = {
     const day = `0${date.getUTCDate()}`.slice(-2)
 
     return `${year}-${month}-${day}`
+  },
+
+  educationLevelFormat: function (key) {
+    const levels = {
+        EM: "Ensino Médio",
+        ES: "Ensino Superior",
+        M: "Mestrado",
+        D: "Doutorado"
+    }
+
+    const formatedValue = levels[key]
+
+    return formatedValue
   }
 }

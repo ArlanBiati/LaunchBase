@@ -1,7 +1,7 @@
 const fs = require('fs')
 const data = require ('./data.json')
 const Intl = require('intl')
-const { age, date } = require('./utils')
+const { age, date, educationLevelFormat } = require('./utils')
 
 exports.show = function (req, res) {
 
@@ -17,6 +17,7 @@ exports.show = function (req, res) {
   const teacher = {
     ...foundTeacher,
     age: age(foundTeacher.birth),
+    schooling: educationLevelFormat(foundTeacher.schooling),
     subjectTeachs: foundTeacher.subjectTeachs.split(","),
     created_at: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at)
   }

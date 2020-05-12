@@ -28,17 +28,7 @@
 
       <div class="item">
         <h3>Grau de escolaridade</h3>
-          <span>
-            {% if teacher.typeClass == "EM" %}}
-              Ensino Médio
-            {% elif teacher.typeClass == "ES" %}
-              Ensino Superior
-            {% elif teacher.typeClass == "M" %}
-              Mestrado
-            {% else %} 
-              Doutorado
-            {% endif %}
-          </span>
+          <span>{{ teacher.schooling }}</span>
       </div>
 
 
