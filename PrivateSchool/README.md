@@ -1,14 +1,14 @@
-<center>
+<h4 align='center'>
 
 ![Private School](https://user-images.githubusercontent.com/43690080/81704778-99f6d980-9444-11ea-8df2-7233eed5d564.png)
 
-</center>
+</h4>
 
-<center>
+<h4 align='center'>
 
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/43690080/81703898-8eef7980-9443-11ea-9f2b-2323810f12f6.gif)
 
-</center>
+</h4>
 
 
 
