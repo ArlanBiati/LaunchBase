@@ -1,0 +1,74 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+  <link rel="stylesheet" href="/teachers.css">
+  <title>Professores - Private School</title>
+{% endblock head %}
+
+{% block content %}
+
+  <div class="card">
+    <section class="image"></section>
+
+    <section class="details">
+      
+      <h3>Detalhes</h3>
+
+      <div class="item">
+        <h3>Nome Completo</h3>
+        <h2>{{ teacher.name }}</h2>
+      </div>
+
+
+      <div class="item">
+        <h3>Idade</h3>
+        <h2>{{ teacher.age }}</h2>
+      </div>
+
+
+      <div class="item">
+        <h3>Grau de escolaridade</h3>
+          <span>
+            {% if teacher.typeClass == "EM" %}}
+              Ensino Médio
+            {% elif teacher.typeClass == "ES" %}
+              Ensino Superior
+            {% elif teacher.typeClass == "M" %}
+              Mestrado
+            {% else %} 
+              Doutorado
+            {% endif %}
+          </span>
+      </div>
+
+
+      <div class="item">
+        <h3>Tipo de aula</h3>
+        <div>
+          <span>{{ "Presencial" if teacher.typeClass == "P" else "Á distancia" }}</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>Acompanhamento</h3>
+        <div>
+          {% for subjectTeach in teacher.subjectTeachs %}
+            <span>{{ subjectTeach }}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+
+      <div class="item">
+        <h3>Desde</h3>
+        <h2>{{ teacher.created_at }}</h2>
+      </div>
+
+      <a href="/teachers/{{teacher.id}}/edit" class="button">Editar</a>
+
+    </section> 
+  </div>
+
+
+
+{% endblock content %}

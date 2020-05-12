@@ -1,5 +1,7 @@
 const fs = require('fs')
 const data = require ('./data.json')
+const Intl = require('intl')
+const { age, date } = require('./utils')
 
 exports.show = function (req, res) {
 
@@ -15,11 +17,11 @@ exports.show = function (req, res) {
   const teacher = {
     ...foundTeacher,
     age: age(foundTeacher.birth),
-    subjectTeach: foundTeacher.subjectTeach.slice(","),
+    subjectTeachs: foundTeacher.subjectTeachs.split(","),
     created_at: new Intl.DateTimeFormat("pt-BR").format(foundTeacher.created_at)
   }
 
-  return res.render("/teachers/show", { teacher })
+  return res.render("teachers/show", { teacher })
 }
 
 
@@ -32,7 +34,7 @@ exports.post = function (req, res) {
       return res.send('Por favor, preencha todos os campos.')
   }
 
-    let { url_avatar, name, birth, genre, schooling, typeClass_p, typeClass_a,  subjectTeach } = req.body
+    let { url_avatar, name, birth, genre, schooling, typeClass,  subjectTeachs } = req.body
 
   birth = Date.parse(birth)
   const created_at = Date.now()
@@ -45,9 +47,8 @@ exports.post = function (req, res) {
     birth,
     genre,
     schooling,
-    typeClass_p,
-    typeClass_a,
-    subjectTeach,
+    typeClass,
+    subjectTeachs,
     created_at
   })
 
@@ -56,5 +57,58 @@ exports.post = function (req, res) {
     if (err) return res.send('Erro ao gravas arquivo')
 
     return res.redirect('/teachers')
+  })
+}
+
+
+exports.edit = function (req, res) {
+
+  const { id } = req.params
+
+  const foundTeacher = data.teachers.find(function (teacher) {
+
+    return teacher.id == id
+  })
+
+  if (!foundTeacher) res.send ('Not found teacher !')
+
+  const teacher = {
+    ...foundTeacher,
+    birth: date(foundTeacher.birth)
+  }
+
+  return res.render('teachers/edit', { teacher })
+
+}
+
+
+exports.put = function (req, res) {
+
+  const { id } = req.body
+  let index = 0
+
+  const foundTeacher = data.teachers.find(function (teacher, foundIndex){
+
+    if (teacher.id == id) {
+      index == foundIndex
+      return true
+    }
+  })
+
+  if (!foundTeacher) res.send ('Not found teacher !')
+
+  const teacher = {
+    ...foundTeacher,
+    ...req.body,
+    birth: Date.parse(req.body.birth)
+  }
+
+  data.teachers[index] = teacher
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
+    if (err) return res.send('Write error !')
+
+    return res.redirect(`/teachers/${id}`)
+
   })
 }

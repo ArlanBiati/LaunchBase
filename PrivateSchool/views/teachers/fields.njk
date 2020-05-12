@@ -22,15 +22,23 @@
 <div class="item">
   <h3>Sexo</h3>
   <div>
-    <span><input type="radio" name="genre" value="M" 
-    {% if genre == "M" %}
-    checket
-    {% endif %}>Masculino</span>
+    <span><input 
+      type="radio" 
+      name="genre" 
+      value="M" 
+      {% if teacher.genre == "M" %}
+      checked
+      {% endif %}
+    >Masculino</span>
 
-    <span><input type="radio" name="genre" value="F"
-    {% if genre == "F" %}
-    checket
-    {% endif %}>Feminino</span>
+    <span><input 
+      type="radio" 
+      name="genre" 
+      value="F"
+      {% if teacher.genre == "F" %}
+      checked
+      {% endif %}
+    >Feminino</span>
   </div>
 </div>
 
@@ -49,15 +57,23 @@
 <div class="item">
   <h3>Tipo de aula</h3>
   <div>
-    <span><input type="radio" name="typeClass_p" value="P" 
-    {% if typeClass_p == "P" %}
-    checket
-    {% endif %}>Presencial</span>
+    <span><input 
+      type="radio" 
+      name="typeClass" 
+      value="P" 
+      {% if teacher.typeClass == "P" %}
+      checked
+      {% endif %}
+    >Presencial</span>
 
-    <span><input type="radio" name="typeClass_d" value="D"
-    {% if typeClass_p == "D" %}
-    checket
-    {% endif %}>Á distancia</span>
+    <span><input 
+      type="radio" 
+      name="typeClass" 
+      value="D"
+      {% if teacher.typeClass == "D" %}
+      checked
+      {% endif %}
+    >Á distancia</span>
   </div>
 </div>
 
@@ -65,6 +81,6 @@
 <div class="item">
   <h3>Acompanhamento(s)</h3>
   <div>
-    <input type="text" name="subjectTeach" placeholder="Separe os serviçoes prestados por vírgula" value="{{ teacher.subjectTeach }}">
+    <input type="text" name="subjectTeachs" placeholder="Separe os serviçoes prestados por vírgula" value="{{ teacher.subjectTeachs' }}">
   </div>
 </div>

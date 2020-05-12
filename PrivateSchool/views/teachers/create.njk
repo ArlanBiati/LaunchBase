@@ -14,32 +14,7 @@
     <section class="details">
       <h3>Novo professor</h3>
 
-      {% include '/teachers/fields.njk' %}
-
-      <button type="submit">Salvar</button>
-
-    </section>
-  
-  </form>
-
-{% endblock content %}
-{% extends 'layout.njk' %}
-
-{% block head %}
-  <link rel="stylesheet" href="/create.css">
-  <title>Editar Professores - Private School</title>
-{% endblock head %}
-
-{% block content %}
-
-  <form class="card" action="/teachers" method="post">
-  
-    <section class="image"></section>
-
-    <section class="details">
-      <h3>Cadastrar Professor</h3>
-
-      {% include '/teachers/fields.njk' %}
+      {% include 'teachers/fields.njk' %}
 
       <button type="submit">Salvar</button>
 
