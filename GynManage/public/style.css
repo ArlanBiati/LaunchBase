@@ -180,3 +180,9 @@ a.button {
   display: block;
   text-align: center;
 }
+
+#form-delete button[type="submit"] {
+  margin-top: 8px;
+  background-color: lightcoral;
+  cursor: pointer;
+}

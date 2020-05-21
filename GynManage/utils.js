@@ -13,7 +13,7 @@ module.exports = {
     return age
   },
 
-  date: function date (timestamp) {
+  date: function (timestamp) {
     const date = new Date(timestamp)
 
     const year = date.getUTCFullYear()
